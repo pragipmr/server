@@ -1,6 +1,6 @@
 ---
 lab:
-    title: 'Lab Test: Implementing integration between AD DS and Azure AD'
+    title: 'Lab: Implementing integration between AD DS and Azure AD'
     module: 'Module 2: Implementing Identity in Hybrid Scenarios'
 ---
 
