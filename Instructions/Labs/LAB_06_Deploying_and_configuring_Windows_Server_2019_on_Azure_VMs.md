@@ -31,9 +31,9 @@ After completing this lab, you'll be able to:
 
 Lab virtual machines: **SEA-CL1** and **SEA-DC1**
 
-User name: **CONTOSO\\Mike**
+User name: **CONTOSO\\Administrator**
 
-Password: **Pa55w.rd1234**
+Password: **Pa55w.rd**
 
 For this lab, you'll use the available VM environment and an Azure subscription. Before you begin the lab, ensure that you have an Azure subscription and a user account with the Owner or Contributor role in that subscription.
 
@@ -91,7 +91,7 @@ In this task, you will enable the Standard tier of Azure Security Center.
    |Boot diagnostics|On|
    |Diagnostics storage account|Use the default value.|
 
-1. When you reach the **Review + Create** tab of the **Create a virtual machine** blade, proceed to task 2.
+1. When you reach the **Review + Create** tab of the **Create a virtual machine** blade, proceed to task 3.
 
 ### Task 3: Download the ARM template and parameters files from the Azure portal
 
@@ -167,7 +167,7 @@ The main tasks for this exercise are as follows:
    |Setting|Value|
    |---|---|
    |Subscription|Use the name of the Azure subscription you are using in this lab.|
-   |Resource group|The name of a new resource group ws2019-06-rg1|
+   |Resource group|Use the resource group ws2019-06-rg1.|
    |Region|Use the name of the Azure region into which you can provision Azure VMs.|
    |Admin Password|Pa55w.rd1234|
 
@@ -201,6 +201,8 @@ The main tasks for this exercise are as follows:
 
 1. In the **Security Center** blade, navigate to the **Just in time VM access settings**.
 1. Review the **Unsupported** tab and verify that an entry representing the **ws2019-06-vm0** Azure VM appears on that tab.
+
+> **Note**: It might take about 10 minutes for the VM to appear in the **Unsupported** tab. You may continue with the next exercise.
 
 ## Exercise 5: Configuring Windows Server 2019 security in Azure VMs
 
@@ -264,11 +266,11 @@ The main tasks for this exercise are as follows:
 
 >**Note**: This task is necessary to trigger re-evaluation of the JIT status of the Azure VM. By default, this might take up to 24 hours.
 
-1. In the Azure portal, navigate back to the **Pricing** blade of **Azure Security Center** and switch to the **Free** tier.
+1. In the Azure portal, navigate back to the **Pricing** blade of **Azure Security Center** and switch to the **Free** tier by selecting **Azure Defender off** and **Save**.
 
     >**Note**: Wait for about 2 minutes before you proceed to the next step.
 
-1. In the Azure portal, navigate back to the **Security Center \| Getting started** blade and switch back to the **Standard** tier.
+1. In the Azure portal, navigate back to the **Security Center \| Getting started** blade and switch back to the **Standard** tier by selecting **Upgrade** on the Upgrade tab and selecting **Install Agents**.
 1. Refresh the browser window displaying the Azure portal.
 
 ### Task 4: Configure inbound RDP access to the Azure VM
@@ -278,6 +280,8 @@ The main tasks for this exercise are as follows:
 1. Review the **Not configured** tab, and verify that the entry representing the **ws2019-06-vm0** Azure VM is present on that tab.
 1. Enable JIT VM access for the **ws2019-06-vm0** Azure VM.
 1. Modify the **JIT VM access configuration** by removing access via TPC port 22.
+
+> **Note**: It might take about 10 minutes for the VM to appear in the **Not configured** tab. To accelerate this process, select **Configuration** on the **ws2019-06-vm0** Azure VM and enable JIT VM access.  Then select the link to **Open Azure Security Center**.
 
 ### Task 5: Connect to the Azure VM via JIT VM access
 
@@ -291,8 +295,8 @@ The main tasks for this exercise are as follows:
    
    |Setting|Value|
    |---|---|
-   |Username|Student|
-   |Password|Pa55w.rd|
+   |Username|Mike|
+   |Password|Pa55w.rd1234|
 
 1. Verify that you can successfully sign in to the Azure VM via Remote Desktop, and then close the Remote Desktop session.
 
