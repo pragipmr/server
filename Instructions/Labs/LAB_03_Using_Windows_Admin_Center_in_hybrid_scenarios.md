@@ -26,8 +26,8 @@ After completing this lab, you'll be able to:
 
 Lab virtual machines: **SEA-CL1**, **SEA-DC1**, and **SEA-SVR2**
 
-User name: **CONTOSO\\Student**
-Password: **Pa55w.rd1234**
+User name: **CONTOSO\\Administrator**
+Password: **Pa55w.rd**
 
 For this lab, you'll use SEA-CL1, SEA-DC1, and SEA-SVR2 lab virtual machines and an Azure subscription. Before you begin the lab, complete the following steps:
 
@@ -95,7 +95,7 @@ The main tasks for this exercise are as follows:
 
 1. On SEA-CL1, start Microsoft Edge and connect to Windows Admin Center running on SEA-SVR2.
 1. From the Windows Admin Center page, attempt to add an Azure Network Adapter.
-1. When prompted, register Windows Admin Center to the Azure subscription you used in the previous exercise.
+1. When prompted, register Windows Admin Center to the Azure subscription you used in the previous exercise. On the **Get started with Azure in Windows Admin Center** page for the **Azure Active Directory application** prompt, select **Create New**.  Complete the remaining steps.
 
 ### Task 2: Create an Azure Network Adapter
 
