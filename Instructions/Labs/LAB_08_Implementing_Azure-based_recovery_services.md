@@ -153,11 +153,11 @@ The main tasks for this exercise are as follows:
 #### Task 2: Configure the Azure Site Recovery vault
 
 1. Within the Remote Desktop session to **ws2019-08-hvm0**, in the Azure portal, navigate to the **ws2019-08a-rsvault** blade.
-1. From the **ws2019-08a-rsvault** blade, set **Storage replication type** of the vault to **Locally-redundant**.
+1. From the **ws2019-08a-rsvault** blade, set **Storage replication type** of the vault to **Locally-redundant** which is in the Recovery Vault's Properties - Backup Configuration blade.
 
    > **Note: **Storage replication type cannot be changed once you implement protection.
 
-1. From the **ws2019-08a-rsvault** blade, disable **Soft Delete** of the vault.
+1. From the **ws2019-08a-rsvault** blade, disable **Soft Delete** of the vault which is in the Recovery Vault's Properties - Security Settings blade.
 
 
 ## Exercise 3: Implementing Hyper-V VM protection by using Azure Site Recovery vault
@@ -314,7 +314,7 @@ The main tasks for this exercise are as follows:
 1. From the **ws2019-08a-rsvault \| Replicated items** blade, navigate to the **ws2019-08-vm1** replicated items blade.
 1. On the **ws2019-08-vm1** replicated items blade, review the **Health and status**, **Failover readiness**, **Latest recovery points**, and **Infrastructure view** sections. Note the **Planned Failover**, **Failover** and **Test Failover** toolbar icons.
 
-   > **Note: **Wait until the status changes to **Protected**. This might take additional 15 minutes. You will need to refresh the browser page for the status to be updated.
+   > **Note: **Wait until the status changes to **Protected**. This might take additional 15 minutes. You will need to refresh the browser page for the status to be updated. While waiting for the replication of the nested VM to complete, proceed to Exercise 4.
 
 1. On the **ws2019-08-vm1** replicated items blade, select **Latest recovery points** and review **Latest crash-consistent** and **Latest app-consistent** recovery points. 
 
@@ -331,7 +331,7 @@ The main tasks for this exercise are as follows:
 
 1. In the Azure portal, navigate back to the **ws2019-08a-rsvault** blade and, from there, navigate to the listing of **Site Recovery jobs**. Wait until the status of the **Test failover** job is listed as **Successful**.
 1. In the Azure portal, navigate to the **Virtual machines** blade and note the entry representing the newly provisioned virtual machine **ws2019-08-vm1-test**.
-1. In the Azure portal, navigate back to the on the **ws2019-08-vm1** replicated item blade and initiate **Cleanup test failover**.
+1. In the Azure portal, navigate back to the **ws2019-08-vm1** replicated item blade and initiate **Cleanup test failover**.
 1. Once the test failover cleanup job completes, refresh the browser page displaying the **ws2019-08-vm1** replicated items blade and note that you have the option to perform planned and unplanned failover.
 1. From the **ws2019-08-vm1** replicated items blade, navigate to the **Planned failover** blade.
 1. On the **Planned failover** blade, note that the failover direction settings are already set and not modifiable. 
