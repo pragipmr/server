@@ -341,7 +341,7 @@ The main tasks for this exercise are:
 
 1. In the **Forest credentials** dialog box, enter the following credentials, and then select **OK**:
 
-    - Username: **CONTOSO\\Administrator**
+    - Username: **Administrator**
     - Password: **Pa55w.rd**
 
 1. On the **Enable single sign-on** page, verify that there's a green check mark next to **Enter credentials**, and then select **Next**.

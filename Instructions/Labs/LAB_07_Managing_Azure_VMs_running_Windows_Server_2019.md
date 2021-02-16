@@ -137,6 +137,7 @@ The main tasks for this exercise are:
 1. When prompted to authenticate, sign in as **Student** with the **Pa55w.rd1234** password.
 1. Within the Remote Desktop session to **Mod07Gateway**, disable the **IE Enhanced Security Configuration** for Administrators. 
 1. Within the Remote Desktop session to **Mod07Gateway**, use Internet Explorer to download Microsoft Edge and install it with the default settings. 
+   > **Note**: The **Mod07Gateway** may be need time to apply Windows Updates before the Edge browser can be installed.  Installing a Chrome browser can be a quicker option.
 1. Within the Remote Desktop session to **Mod07Gateway**, use Microsoft Edge to download [Windows Admin Center](https://aka.ms/windows-admin-center-overview). 
 1. Within the Remote Desktop session to **Mod07Gateway**, install Windows Admin Center with the default settings. 
 
@@ -346,7 +347,7 @@ The main tasks for this exercise are:
 
 1. On SEA-CL1, in the Microsoft Edge window displaying the Azure portal, navigate to the **Policy \| Definitions** blade.
 
-1. On the **Policy \| Definitions** blade, locate the **Audit Windows VMs on which the specified services are not installed and 'Running'** inititative definition.
+1. On the **Policy \| Definitions** blade, locate the **Audit Windows machines on which the specified services are not installed and 'Running'** inititative definition.
 
 1. From the **Policy \| Definitions** blade, create an assignment of the **Audit Windows VMs on which the specified services are not installed and 'Running'** initiative definition with the following settings: 
 

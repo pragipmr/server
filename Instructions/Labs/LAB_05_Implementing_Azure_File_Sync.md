@@ -177,7 +177,12 @@ The main tasks for this exercise are:
 2. In the Azure portal, enable cloud tiering for the ```LON-SVR1.Contoso.com``` endpoint in **Sync1**. Set the **free disk space** policy to **80** percent and the **date policy** to cache files that were accessed in last **7** days.
 3. In the File Explorer instance that's connected to the **\\\\LON-SVR1\\Data** folder, in the **details** pane, add the **Attributes** column by right-clicking or accessing the context menu for the **Title** column; for example, on **Name**, select **More**, and then select **Attributes**.
 
-    >**Note:** After some time, the files on **LON-SVR1** would automatically tier. You can trigger tiering immediately by running the **Invoke-StorageSyncCloudTiering** cmdlet.
+    >**Note:** After some time, the files on **LON-SVR1** would automatically tier. You can trigger tiering immediately by running on LON-Cl1:
+    ```Terminal-nocopy
+    Enter-PSSession -computername lon-svr1 
+    Import-Module "C:\Program Files\Azure\StorageSyncAgent\StorageSync.Management.ServerCmdlets.dll" 
+    Invoke-StorageSyncCloudTiering -Path D:\data 
+    ```
 
 4. Verify the attributes of the files. Additionally, verify the size on the disk for the **Windows Server 2016 Hybrid Cloud.pdf** file by reviewing its properties.
 
