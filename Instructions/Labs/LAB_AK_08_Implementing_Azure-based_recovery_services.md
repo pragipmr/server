@@ -313,7 +313,7 @@ lab:
 1. On the **ws2019-08a-rsvault \| Replicated items** blade, select the **ws2019-08-vm1** entry.
 1. On the **ws2019-08-vm1** replicated items blade, review the **Health and status**, **Failover readiness**, **Latest recovery points**, and **Infrastructure view** sections. Note the **Planned Failover**, **Failover** and **Test Failover** toolbar icons.
 
-   > **Note:** Wait until the status changes to **Protected**. This might take additional 15 minutes. You will need to refresh the browser page for the status to be updated.
+   > **Note:** Wait until the status changes to **Protected**. This might take additional 15 minutes. You will need to refresh the browser page for the status to be updated. While waiting for the replication of the nested VM to complete, proceed to Exercise 4.
 
 1. On the **ws2019-08-vm1** replicated items blade, select **Latest recovery points** and review **Latest crash-consistent** and **Latest app-consistent** recovery points. 
 
@@ -331,7 +331,7 @@ lab:
 
 1. In the Azure portal, navigate back to the **ws2019-08a-rsvault** blade and, in the vertical menu, in the **Monitoring** section, select **Site Recovery jobs**. Wait until the status of the **Test failover** job is listed as **Successful**.
 1. In the Azure portal, use the **Search resources, services, and docs** text box in the toolbar to search for and select **Virtual machines** and, on the **Virtual machines** blade, note the entry representing the newly provisioned virtual machine **ws2019-08-vm1-test**.
-1. In the Azure portal, navigate back to the on the **ws2019-08-vm1** replicated item blade and select **Cleanup test failover**.
+1. In the Azure portal, navigate back to the **ws2019-08-vm1** replicated item blade and select **Cleanup test failover**.
 1. On the **Test failover cleanup** blade, select the checkbox **Testing is complete. Delete test failover virtual machine(s)** and select **OK**.
 1. Once the test failover cleanup job completes, refresh the browser page displaying the **ws2019-08-vm1** replicated items blade and note that you have the option to perform planned and unplanned failover.
 1. On the **ws2019-08-vm1** replicated items blade, select **Planned failover**. 

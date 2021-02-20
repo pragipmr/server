@@ -118,6 +118,9 @@ lab:
 1. After a few moments, after Microsoft Edge installs and then opens with the **Welcome** page, select **Get started**.
 1. On the **Let's set up your new tab** pane, select **Confirm**. 
 1. On the **See your favorites, passwords and many more on any device** pane, select **Continue without Signing-in**.
+
+   >**Note**: The Mod07Gateway may be need time to apply Windows Updates before the Edge browser can be installed. Installing a Chrome browser can be a quicker option.
+
 1. In the Microsoft Edge window, navigate to [Windows Admin Center](https://aka.ms/windows-admin-center-overview)	
 1. Select the **Windows Admin Center** link in the **Download now** section to navigate to the Windows Admin Center section of Microsoft Evaluation Center.
 1. In the **Start your evaluation** section, select **Continue**, enter requested information on the download form, select **Continue**, and then select **Download**.

@@ -17,7 +17,7 @@ lab:
 
     >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and select **Create storage**.
 1. In the toolbar of the Cloud Shell blade, select the **Upload/Download files** icon, in the drop-down menu select **Upload**, and upload the file **M03-lab-sub_template.json** into the Cloud Shell home directory.
-1. From the Cloud Shell blade, run the following to create a resource group that will contain resources you provision in this lab (replace the `<Azure region>` placeholder with the name of the Azure region that is available in your subscription and which is closest to the location of your lab computer):
+1. From the Cloud Shell blade, run the following to create a resource group that will contain resources you provision in this lab Replace the `<Azure region>` placeholder with *eastus*:
 
    ```pwsh
    $location = '<Azure region>'
@@ -28,7 +28,7 @@ lab:
      -rgLocation $location `
      -rgName 'ws2019-m031-rg'
    ```
-      >**Note**: To identify Azure regions where you can provision Azure VMs, refer to [Find Azure credit offers in your region](https://aka.ms/regions-offers).
+      >**Note**: This lab has been tested and verified using East US, so you should use that region. In general, to identify Azure regions where you can provision Azure VMs, refer to [Find Azure credit offers in your region](https://aka.ms/regions-offers).
 
 ### Task 2: Create an Azure VM by using an Azure Resource Manager template
 
@@ -53,7 +53,7 @@ lab:
 ### Task 1: Register Windows Admin Center with Azure
 
 1. On SEA-CL1, start Microsoft Edge and navigate to ```https://sea-svr2.contoso.com``` in order to connect to Windows Admin Center running on SEA-SVR2.
-1. If prompted, sign in as **CONTOSO\\Student** with **Pa55w.rd1234** as the password.
+1. If prompted, sign in as **CONTOSO\Administrator** with **Pa55w.rd1234** as the password.
 1. On the ```https://sea-svr2.contoso.com``` page in the Microsoft Edge, select the ```sea-srv2.contoso.com [Gateway]``` link.
 1. On the Windows Admin Center page, select **Networks**, select **Actions**, and then select **+ Add Azure Network Adapter (Preview)**
 1. When prompted, in the **Add Azure Network Adapter** window, select **Register Windows Admin Center to Azure**.
@@ -89,7 +89,7 @@ lab:
 |Setting|Value|
 |---|---|
 |Subscription|The name of the Azure subscription you are using in this lab|
-|Location|The name of the Azure region into which you deployed the Azure VMs in the previous exercise|
+|Location|eastus|
 |Virtual network|ws2019-m03-vnet|
 |Gateway subnet|10.3.3.224/27|
 |Gateway SKU|VpnGw1|
@@ -139,6 +139,8 @@ lab:
      VirtualNetworkName = $vnetName
      SubnetName = $subnetName
      GenerateSslCert = $true
+     size = $size
+     image = $image
    }
    ```
 

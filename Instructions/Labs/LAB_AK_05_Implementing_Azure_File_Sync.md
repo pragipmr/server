@@ -147,8 +147,13 @@ lab:
 3. On the **Server Endpoint Properties** tab, select **Enabled** in the **Cloud Tiering** section.
 4. In the **Always preserve the specified percentage of free space on the volume** text box, enter **90**, select **Enabled** for the **date policy**. In the **Only cache files that were accessed or modified within the specified number of days** text box, enter **14**, and then select **Save**.
 
-    >**Note:** After some time, files on **LON-SVR1** would automatically tier. You can trigger tiering immediately by running the **Invoke-StorageSyncCloudTiering** cmdlet.
+    >**Note:** After some time, files on **LON-SVR1** would automatically tier. You can trigger tiering immediately by running on LON-Cl1:
 
+    ```powershell
+    Enter-PSSession -computername lon-svr1
+    Import-Module "C:\Program Files\Azure\StorageSyncAgent\StorageSync.Management.ServerCmdlets.dll"
+    Invoke-StorageSyncCloudTiering -Path D:\data 
+    ```
 5. In the File Explorer instance that's connected to the **\\\\LON-SVR1\\Data** folder, add the **Attributes** column in the **details** pane by right-clicking or accessing the context menu for the **Title** column in **details** pane; for example, on **Name**, select **More**, select the **Attributes** check box, and then select **OK**.
 6. Drag the **Attributes** column to be next to the **Name** column, and then note the file dates and their attributes.
 7. Verify the attributes of the files. Additionally, verify the size on the disk for the **Windows Server 2016 Hybrid Cloud.pdf** file by reviewing its properties.

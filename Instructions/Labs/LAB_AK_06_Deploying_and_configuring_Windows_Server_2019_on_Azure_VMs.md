@@ -188,6 +188,8 @@ In this task, you will use the Azure portal to create resource groups and create
 
     >**Note**: This is expected because the Azure VM is currently not accessible from internet and doesn't have an NSG associated with its network interface.
 
+    >**Note**: It might take about 10 minutes for the VM to appear in the Unsupported tab. You may continue with the next exercise.
+
 ## Exercise 5: Configuring Windows Server 2019 security in Azure VMs
 
 ### Task 1: Create and configure an NSG
@@ -255,7 +257,7 @@ In this task, you will use the Azure portal to create resource groups and create
 
 1. In the Azure portal, navigate back to the **Azure Security Center** blade, and in the **POLICY & COMPLIANCE** section, select **Coverage**.
 1. On the **Security Center \| Coverage** blade, select the **Edit plan** link.
-1. On the **Pricing** blade, select the **Free** tile, select **Save**, clear the check box **Microsoft may contact me about my feedback**, and select **Confirm**.
+1. On the **Pricing** blade, switch to the **Free** tier by selecting **Azure Defender off** and **Save**. Clear the check box **Microsoft may contact me about my feedback**, and select **Confirm**.
 
     >**Note**: Wait for about 2 minutes before you proceed to the next step.
 
@@ -269,6 +271,8 @@ In this task, you will use the Azure portal to create resource groups and create
 1. On the **Security Center|Just in time VM access** blade, select the **Not configured** tab, and note the entry representing the **ws2019-06-vm0** Azure VM.
 1. Select the **ws2019-06-vm0** check box, and then select **Enable JIT on 1 VMs**.
 1. On the **JIT VM access configuration** blade, select and hold, right-click, or access the context menu from the ellipsis next to the **22** entry, select **Delete**, and then select **Save**.
+
+   >**Note**: It might take about 10 minutes for the VM to appear in the **Not configured** tab. To accelerate this process, select **Configuration** on the **ws2019-06-vm0** Azure VM and enable JIT VM access. Then select the link to **Open Azure Security Center**.
 
 ### Task 5: Connect to the Azure VM via JIT VM access
 
@@ -284,8 +288,8 @@ In this task, you will use the Azure portal to create resource groups and create
    
    |Setting|Value|
    |---|---|
-   |Username|Student|
-   |Password|Pa55w.rd|
+   |Username|Mike|
+   |Password|Pa55w.rd1234|
 
 1. Verify that you can successfully sign in to the Azure VM via Remote Desktop and close the Remote Desktop session.
 

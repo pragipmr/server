@@ -11,7 +11,7 @@ lab:
 
 ### Task 1: Start Azure Cloud Shell
 
-1. Sign in to **SEA-CL1** as **Contoso\\\\Administrator** with password **Pa55w.rd**.
+1. Sign in to **SEA-CL1** as **Contoso\\Administrator** with password **Pa55w.rd**.
 1. Open Microsoft Edge, and then browse to the [Azure portal](https://portal.azure.com).
 1. Sign in by using the credentials that you created for this course.
 1. On the Azure portal, select **Cloud Shell**.
@@ -59,31 +59,34 @@ lab:
 1. On the **Security Center** menu, select **Getting started**.
 1. On the **Upgrade** tab of the **Getting started** pane, for **Enable standard tier on 1 subscriptions**, select your subscription.
 1. Select **Upgrade**.
+
+    > **Note:** Your subscription may already be upgraded for Security Center in which case there will not be an upgrade button and you may continue with Task 2.
+
 1. Select **Continue without installing agents**.
 
 ### Task 2: Turn on automatic provisioning of the Log Analytics agent
 
 1. Browse back to Security Center.
-1. In Security Center, select **Pricing & settings**, select your subscription, and then select **Data Collection**.
-1. In the **Auto Provisioning** section, select **On**.
-1. In the **Workspace configuration** section, verify that **Use workspace(s) created by Security Center (default)** is selected, and then select **Save**.
-1. Refresh the page, and then browse back to the **Data Collection** page.
-1. In the **Windows security events** section, select **All Events**, and then select **Save** again.
+1. In Security Center, select **Pricing & settings**, select your subscription, and then select **Auto Provisioning**.
+1. In the **Log Analytics agent for Azure VMs** section, select **On** if it is not already enabled.
+1. In the **Workspace configuration** section, verify that **ASC default workspace** is selected, and then select **Save** if it is not already enabled.
+1. Refresh the page, and then browse back to the **Auto Provisioning** page.
+1. Verify that **Log Analytics agent for Azure VMs** is **On** and the **Description** indicates that security related configurations and events will be collected. Select **Edit Configuration** and verify **All Events** is selected. If not, select it and save the setting.
 
 > **Note:** It might take up to 30 minutes for the **Log Analytics** workspace to be created after selecting **Save** in step 4. You might need to refresh the page several times before the option to select **All Events** is available. Continue only after you're able to select **All events** and save the setting.
 
 ### Task 3: Review the features and capabilities that apply to hybrid scenarios
 
-1. In the **RESOURCE SECURITY HYGIENE** section of Security Center, select **Compute & apps**.
+1. In the **General** section of Security Center, select **Inventory**.
 1. Review the **Recommendation** list.
 
-   > **Note:** that the **Failed Resources** box indicates the type of resource to which the recommendation applies and lists how many resources file the recommendation.
+   > **Note:** The **Failed Resources** box indicates the type of resource to which the recommendation applies and lists how many resources the recommendation applies to.
 
-1. Select **VMs and Servers**, and then select the **ws2019-m04-vm0** VM.
+1. Under the **Resource Name** column select the **ws2019-m04-vm0** VM.
 1. Note the details of the VM's security health.
 1. Close the **ws2019-m04-vm0** pane.
-1. In the **POLICY & COMPLIANCE** section, select **Regulatory compliance**.
-1. Select **Azure CIS 1.1.0**, expand the **Virtual Machines** controls, and then review the other items on the **Security Center** menu.
+1. In the **Coud Security** section, select **Regulatory compliance**.
+1. Under **Azure Security Benchmark**, select **expand all compliance controls**, and then review the assessments.
 
 ## Exercise 3: Onboarding on-premises Windows Server 2019 into Azure Security Center
 
@@ -106,12 +109,12 @@ lab:
     .\MMASetup-amd64.exe /c /t:c:\labfiles\mod04
     ```
 
-1. Open a new tab in Microsoft Edge, open **Windows Admin Center**, and then sign in as **Contoso\\\\Administrator** with password **Pa55w.rd**.
+1. Open a new tab in Microsoft Edge, open **Windows Admin Center**, and then sign in as **Administrator** with password **Pa55w.rd**.
 1. Select **Add**.
 1. Under **Windows Server**, select **Add**.
 1. Under **Server name**, enter ```sea-svr1.contoso.com```, and then select **Add**.
-1. In **Windows Admin Center**, select **SEA-SVR1**, and then sign in as **Contoso\\\\Administrator** with password **Pa55w.rd**.
-1. Select **PowerShell**, and then enter the password **Pa55w.rd**.
+1. In **Windows Admin Center**, select **SEA-SVR1**, and then sign in as **Contoso\\Administrator** with password **Pa55w.rd**.
+1. Select SEA-SVR1, select **PowerShell**, and then enter the password **Pa55w.rd**.
 1. Enter the following commands:
 
     ```powershell
@@ -165,18 +168,18 @@ lab:
 
 1. On the **Overview** page, review the **Threat protection** section. You should have one new alert. If not, wait a few minutes.
 
-1. In the **THREAT PROTECTION** section of the **Security Center** menu, select **Security alerts**. There should be one alert.
+1. In the **General** section of the **Security Center** menu, select **Security alerts**. There should be one alert.
 
-1. In the **RESOURCE SECURITY HYGIENE** section of the **Security Center** menu, select **Compute & apps**.
+1. In the **General** section of the **Security Center** menu, select **Inventory**.
 
-1. Select **VMs and Servers**, and then select the **ws2019-mo4-vm0** VM.
+1. Select the **ws2019-mo4-vm0** VM.
 
 1. Review the recommendations.
 
 ### Task 2: Validate the Security Center capabilities for on-premises VMs
 
 1. In Microsoft Edge, switch to the **Windows Admin Center** tab.
-1. Verify that you're signed in to **SEA-SVR1** as **Contoso\\\\Administrator**, and then select **PowerShell**.
+1. Verify that you're signed in to **SEA-SVR1** as **Contoso\\Administrator**, and then select **PowerShell**.
 1. Enter the following commands:
 
     ```powershell
@@ -187,10 +190,10 @@ lab:
 1. Open Microsoft Edge, and then browse to the [Azure portal](https://portal.azure.com).
 1. Sign in by using the credentials that you created for this course.
 1. In the search box, enter **Security Center**, and then select **Security Center** from the results.
-1. On the **Overview** page, review the **Threat protection** section. You should have one new alert for **SEA-SVR1**. If not, wait a few minutes.
-1. In the **THREAT PROTECTION** section of the **Security Center** menu, select **Security alerts**. There should be a new alert for **SEA-SVR1**.
-1. In the **RESOURCE SECURITY HYGIENE** section of the **Security Center** menu, select **Compute & apps**, and then select **SEA-SVR1**.
-1. Review the recommendations for **SEA-SVR1**.
+7. On the **Overview** page, review the **Azure defender** section. You should have one new alert for **SEA-SVR1**. If not, wait a few minutes.
+8. In the **General** section of the **Security Center** menu, select **Security alerts**. There should be a new alert for **SEA-SVR1**.
+9. In the **General** section of the **Security Center**, select **Inventory** and then select **SEA-SVR1**.
+10. Review the recommendations for **SEA-SVR1**.
 
 > **Note:** You might need to wait several minutes for **SEA-SVR1** to be listed.
 

@@ -27,7 +27,7 @@ After completing this lab, you'll be able to:
 Lab virtual machines: **SEA-CL1**, **SEA-DC1**, and **SEA-SVR2**
 
 User name: **CONTOSO\\Administrator**
-Password: **Pa55w.rd**
+Password: **Pa55w.rd1234**
 
 For this lab, you'll use SEA-CL1, SEA-DC1, and SEA-SVR2 lab virtual machines and an Azure subscription. Before you begin the lab, complete the following steps:
 
@@ -50,7 +50,7 @@ The main tasks for this exercise are as follows:
 1. On SEA-CL1, start Microsoft Edge, navigate to the [Azure portal](https://portal.azure.com), and sign in by using credentials of a user account with the Owner role in the subscription you'll be using in this lab.
 1. In the Azure portal, open a PowerShell session in the **Cloud Shell** blade.
 1. Upload the file **M03-lab-sub_template.json** , which can be found at C:\Labfiles\Mod03 into the Cloud Shell home directory.
-1. From the Cloud Shell blade, run the following to create a resource group that will contain resources you provision in this lab (replace the `<Azure region>` placeholder with the name of the Azure region that is available in your subscription and which is closest to the location of your lab computer):
+1. From the Cloud Shell blade, run the following to create a resource group that will contain resources you provision in this lab Replace the `<Azure region>` placeholder with *eastus*:
 
    ```pwsh
    $location = '<Azure region>'
@@ -62,7 +62,7 @@ The main tasks for this exercise are as follows:
      -rgName 'ws2019-m031-rg'
    ```
 
-    >**Note**: To identify Azure regions where you can provision Azure VMs, refer to [Find Azure credit offers in your region](https://aka.ms/regions-offers).
+    >**Note**: This lab has been tested and verified using East US, so you should use that region. In general, to identify Azure regions where you can provision Azure VMs, refer to [Find Azure credit offers in your region](https://aka.ms/regions-offers).
 
 ### Task 2: Create an Azure VM by using an Azure Resource Manager template
 
@@ -95,7 +95,7 @@ The main tasks for this exercise are as follows:
 
 1. On SEA-CL1, start Microsoft Edge and connect to Windows Admin Center running on SEA-SVR2.
 1. From the Windows Admin Center page, attempt to add an Azure Network Adapter.
-1. When prompted, register Windows Admin Center to the Azure subscription you used in the previous exercise. On the **Get started with Azure in Windows Admin Center** page for the **Azure Active Directory application** prompt, select **Create New**.  Complete the remaining steps.
+1. When prompted, register Windows Admin Center to the Azure subscription you used in the previous exercise.
 
 ### Task 2: Create an Azure Network Adapter
 
@@ -107,7 +107,7 @@ The main tasks for this exercise are as follows:
 |Setting| Value|
 |---|---|
 |Subscription|the name of the Azure subscription you are using in this lab|
-|Location|the name of the Azure region into which you deployed the Azure VMs in the previous exercise|
+|Location|eastus|
 |Virtual network|ws2019-m03-vnet|
 |Gateway subnet|10.3.3.224/27|
 |Gateway SKU|VpnGw1|
@@ -164,6 +164,8 @@ The main tasks for this exercise are as follows:
      VirtualNetworkName = $vnetName
      SubnetName = $subnetName
      GenerateSslCert = $true
+     size = $size
+     image = $image
    }
    ```
 
