@@ -53,7 +53,7 @@ lab:
 ### Task 1: Register Windows Admin Center with Azure
 
 1. On SEA-CL1, start Microsoft Edge and navigate to ```https://sea-svr2.contoso.com``` in order to connect to Windows Admin Center running on SEA-SVR2.
-1. If prompted, sign in as **CONTOSO\Administrator** with **Pa55w.rd1234** as the password.
+1. If prompted, sign in as **CONTOSO\Administrator** with **Pa55w.rd** as the password.
 1. On the ```https://sea-svr2.contoso.com``` page in the Microsoft Edge, select the ```sea-srv2.contoso.com [Gateway]``` link.
 1. On the Windows Admin Center page, select **Networks**, select **Actions**, and then select **+ Add Azure Network Adapter (Preview)**
 1. When prompted, in the **Add Azure Network Adapter** window, select **Register Windows Admin Center to Azure**.
@@ -142,6 +142,13 @@ lab:
      size = $size
      image = $image
    }
+   ```
+
+1. From the Cloud Shell blade, run the following commands to disable certificate verification for PowerShell remoting.
+
+   ```pwsh
+   install-module pswsman
+   Disable-WSManCertVerification -All
    ```
 
 1. From the Cloud Shell blade, run the following to launch the provisioning script:

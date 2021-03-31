@@ -168,6 +168,14 @@ The main tasks for this exercise are:
 ### Task 1: Configure PowerShell Remoting of an Azure VM running Windows Server 2019
 
 1. On **SEA-CL1**, in the Microsoft Edge window, switch to Azure Cloud Shell. If needed, select **Reconnect**.
+
+1. From the Cloud Shell blade, run the following commands to disable certificate verification for PowerShell remoting.
+
+   ```pwsh
+   install-module pswsman
+   Disable-WSManCertVerification -All
+   ```
+
 1. In the Cloud Shell window, at the PowerShell prompt, run the following command to start the **Mod07Target** Azure VM:
 
    ```powershell

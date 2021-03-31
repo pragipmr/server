@@ -177,7 +177,7 @@ In this task, you will use the Azure portal to create resource groups and create
 ### Task 1: Verify the Azure Security Center Standard tier
 
 1. In the Azure portal, on the toolbar, in the **Search resources, services, and docs** text box, search for and select **Security Center**.
-1. On the **Security Center** blade, in the **POLICY AND COMPLIANCE** section, select **Coverage**.
+1. On the **Security Center** blade, in the **Management** section, select **Coverage**.
 1. On the **Security Center|Coverage** blade, to the right of the entry representing the Azure subscription you are using for this lab, select **Edit plan**.
 1. On the **Pricing** blade, verify that the **Standard** tile is selected.
 
@@ -187,7 +187,7 @@ In this task, you will use the Azure portal to create resource groups and create
 1. On the **Security Center|Just in time VM access** blade, select the **Unsupported** tab, and note the entry representing the **ws2019-06-vm0** Azure VM.
 
     >**Note**: This is expected because the Azure VM is currently not accessible from internet and doesn't have an NSG associated with its network interface.
-
+Navigate to the **Security Center|Azure Defender** blade and under **Advanced Protection** select **Just-in-Time VM Access**.
     >**Note**: It might take about 10 minutes for the VM to appear in the Unsupported tab. You may continue with the next exercise.
 
 ## Exercise 5: Configuring Windows Server 2019 security in Azure VMs

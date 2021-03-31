@@ -168,6 +168,12 @@ The main tasks for this exercise are as follows:
      image = $image
    }
    ```
+1. From the Cloud Shell blade, run the following commands to disable certificate verification for PowerShell remoting.
+
+   ```pwsh
+   install-module pswsman
+   Disable-WSManCertVerification -All
+   ```
 
 1. From the Cloud Shell blade, run the following to launch the provisioning script:
 
