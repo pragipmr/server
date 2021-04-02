@@ -183,7 +183,7 @@ In this task, you will use the Azure portal to create resource groups and create
 
 ### Task 2: Review Just in time VM access settings
 
-1. Navigate back to the **Security Center|Coverage** blade, and then in the **ADVANCED CLOUD DEFENSE** section, select **Just in time VM access**.
+1. Navigate to the **Security Center|Azure Defender** blade and under **Advanced Protection** select **Just-in-Time VM Access**.
 1. On the **Security Center|Just in time VM access** blade, select the **Unsupported** tab, and note the entry representing the **ws2019-06-vm0** Azure VM.
 
     >**Note**: This is expected because the Azure VM is currently not accessible from internet and doesn't have an NSG associated with its network interface.
