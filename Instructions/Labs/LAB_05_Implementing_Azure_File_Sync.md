@@ -43,8 +43,8 @@ The main tasks for this exercise are:
 
 ### Task 1: Deploy DFS
 
-1. Sign in to **SEA-CL1** as **Contoso\\Administrator** and use **Pa55w.rd** as the password.
-2. In File Explorer, browse to the **C:\\Labfiles\\Mod05** folder, and then run **M05-DeployDFS.ps1**.
+1. Sign in to **SEA-CL1** as **Contoso\\Administrator** and use **Pa55w.rd** as the password. If in the Lab Setup the **Allfiles** folder was copied to the **Desktop**, then open the **Allfiles** folder, and copy the **Labfiles** folder to **C:**.  Then share the **Labfiles** folder to **Everyone** with **Read** access.
+2. In File Explorer, browse to the **C:\Labfiles\Mod05** folder, and then run **M05-DeployDFS.ps1**.
 
 ### Task 2: Test DFS deployment
 
@@ -93,7 +93,7 @@ The main tasks for this exercise are:
 
 ### Task 3: Deploy Storage Sync Service and a File Sync group
 
-1. On **SEA-CL1**, use the Azure portal to create an Azure File Sync resource named **FileSync1**. Use the same region as you used when deploying the storage account.
+1. On **SEA-CL1**, use the Azure portal to create an Azure File Sync resource named **FileSync1**. Use the same region and Resource Group as you used when deploying the storage account.
 
     >**Note:** Deploying File Sync creates a Storage Sync Service resource.
 
