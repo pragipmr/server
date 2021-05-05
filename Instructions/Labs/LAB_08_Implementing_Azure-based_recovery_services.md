@@ -53,7 +53,7 @@ The main tasks for this exercise are as follows:
    |Resource group|ws2019-08-rg1|
    |Region|Use the name of an Azure region in which you can provision Azure virtual machines.|
 
-1. On **SEA-CL1**, open another Microsoft Edge tab, navigate to the [301-nested-vms-in-virtual-network Azure QuickStart template](https://aka.ms/301-nested-vms-in-virtual-network) and use initiate a deployment the following settings:
+1. On **SEA-CL1**, open another Microsoft Edge tab, navigate to the [301-nested-vms-in-virtual-network Azure QuickStart template](https://github.com/Azure/azure-quickstart-templates/tree/master/demos/nested-vms-in-virtual-network) and use initiate a deployment the following settings:
 
    *Table 2: QuickStart template deployment settings*
 
