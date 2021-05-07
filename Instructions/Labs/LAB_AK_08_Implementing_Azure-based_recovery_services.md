@@ -26,7 +26,7 @@ lab:
    |Region|Use the name of an Azure region in which you can provision Azure virtual machines.|
 
 1. Select **Review + create**, wait for the validation process to complete, and then select **Create**.
-1. On **SEA-CL1**, open another Microsoft Edge tab, navigate to [301-nested-vms-in-virtual-network Azure QuickStart template](https://aka.ms/301-nested-vms-in-virtual-network), and then select **Deploy to Azure**. This will automatically redirect the browser to the **Hyper-V Host Virtual Machine with nested VMs** blade in the Azure portal.
+1. On **SEA-CL1**, open another Microsoft Edge tab, navigate to [301-nested-vms-in-virtual-network Azure QuickStart template](https://github.com/Azure/azure-quickstart-templates/tree/master/demos/nested-vms-in-virtual-network), and then select **Deploy to Azure**. This will automatically redirect the browser to the **Hyper-V Host Virtual Machine with nested VMs** blade in the Azure portal.
 1. On the **Hyper-V Host Virtual Machine with nested VMs** blade in the Azure portal, specify the following settings (leave the others with their default values):
 
    *Table 2: QuickStart template deployment settings*
