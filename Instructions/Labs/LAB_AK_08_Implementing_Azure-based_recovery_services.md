@@ -14,7 +14,7 @@ lab:
 1. Sign in to **SEA-CL1** as **Contoso\\Administrator** with **Pa55w.rd** as the password.
 1. On **SEA-CL1**, start Microsoft Edge, and then navigate to the [Azure portal](https://portal.azure.com). When prompted, sign in using a user account with the Owner role in the Azure subscription you will be using in this lab.
 1. In the Azure portal, use the **Search resources, services, and docs** text box in the toolbar to search for and select **Resource groups**.
-1. On the **Resource groups** blade, select **+ Add**. 
+1. On the **Resource groups** blade, select **+ Create**. 
 1. On the **Create a resource group** blade, specify the following settings: 
 
    *Table 1: Resource group settings*
@@ -26,7 +26,7 @@ lab:
    |Region|Use the name of an Azure region in which you can provision Azure virtual machines.|
 
 1. Select **Review + create**, wait for the validation process to complete, and then select **Create**.
-1. On **SEA-CL1**, open another Microsoft Edge tab, navigate to [301-nested-vms-in-virtual-network Azure QuickStart template](https://github.com/Azure/azure-quickstart-templates/tree/master/demos/nested-vms-in-virtual-network), and then select **Deploy to Azure**. This will automatically redirect the browser to the **Hyper-V Host Virtual Machine with nested VMs** blade in the Azure portal.
+1. On **SEA-CL1**, open another Microsoft Edge tab, navigate to `https://github.com/Azure/azure-quickstart-templates/tree/master/demos/nested-vms-in-virtual-network`, and then select **Deploy to Azure**. This will automatically redirect the browser to the **Hyper-V Host Virtual Machine with nested VMs** blade in the Azure portal.
 1. On the **Hyper-V Host Virtual Machine with nested VMs** blade in the Azure portal, specify the following settings (leave the others with their default values):
 
    *Table 2: QuickStart template deployment settings*
@@ -116,7 +116,7 @@ lab:
    |Location|F:\VMs|
 
 1. On the **Specify Generation** page of the **New Virtual Machine Wizard**, ensure that the **Generation 1** option is selected, and then select **Next >**:
-1. On the **Assign Memory** page of the **New Virtual Machine Wizard**, set **Startup memory** to **2048**, select the **Use Dynamic Memory for this virtual machine** checkbox, and select **Next >**.
+1. On the **Assign Memory** page of the **New Virtual Machine Wizard**, set **Startup memory** to `2048`, select the **Use Dynamic Memory for this virtual machine** checkbox, and select **Next >**.
 1. On the **Configure Networking** page of the **New Virtual Machine Wizard**, in the **Connection** drop-down list, select **NestedSwitch**, and then select **Next >**.
 1. On the **Connect Virtual Hard Disk** page of the **New Virtual Machine Wizard**, select the option **Use an existing virtual hard disk**, select **Browse**. In the **Open** window, browse to the **F:\\VHDs** folder, select the VHD file you downloaded in the previous task, and select **Open**. 
 1. Back on the **Connect Virtual Hard Disk** page, select **Next >**.
@@ -135,14 +135,15 @@ lab:
    Rename-Computer -NewName 'ws2019-08-vm1' -Restart
    ```
 
-   > **Note:** The command will rename the operating system and restart it.
+   >  **Note:** The command will rename the operating system and restart it.
    
 ## Exercise 2: Creating and configuring an Azure Site Recovery vault
 
 #### Task 1: Create an Azure Site Recovery vault
 
-1. Within the Remote Desktop session to **ws2019-08-hvm0**, in the Internet Explorer window, navigate to the [Azure portal](https://portal.azure.com), and sign in by providing credentials of a user account with the Owner role in the subscription you are using in this lab.
-1. In the Azure portal, use the **Search resources, services, and docs** text box in the toolbar to search for and select **Recovery Services vaults** and, on the **Recovery Services vaults** blade, select **+ Add**.
+1. Within the Remote Desktop session to **ws2019-08-hvm0**, in the Internet Explorer window, navigate to `https://www.microsoft.com/en-us/edge`. Scroll down and click on **Using Windows Server? Get Microsoft Edge here**. In the Download Microsoft Edge window, click **Accept and download**, then click **Run**. Once Microsoft Edge completes the installation, click **Complete setup**, click **Confirm**. Click **Continue without signing in**.
+1. Within the Remote Desktop session to ws2019-08-hvm0, in **Microsoft Edge**, navigate to `https://portal.azure.com`, and sign in by providing credentials of a user account with the Owner role in the subscription you are using in this lab.
+1. In the Azure portal, use the **Search resources, services, and docs** text box in the toolbar to search for and select **Recovery Services vaults** and, on the **Recovery Services vaults** blade, select **+ Create**.
 1. On the **Basics** tab of the **Create Recovery Services vault** blade, specify the following settings (leave others with their default values) and select **Review + create**:
 
    *Table 5: Recovery Services vault settings*
@@ -174,7 +175,7 @@ lab:
 
 #### Task 1: Implement an Azure recovery site
 
-1. In the Azure portal, use the **Search resources, services, and docs** text box in the toolbar to search for and select **Virtual networks** and, on the **Virtual networks** blade, select **+ Add**.
+1. In the Azure portal, use the **Search resources, services, and docs** text box in the toolbar to search for and select **Virtual networks** and, on the **Virtual networks** blade, select **+ Create**.
 1. On the **Basics** tab of the **Create virtual network** blade, specify the following settings (leave others with their default values) and select **Next: IP Addresses**:
 
    *Table 6: Virtual network **ws2019-08-dr-vnet** settings*
@@ -198,7 +199,7 @@ lab:
 
 1. Back on the **IP addresses** tab of the **Create virtual network** blade, select **Review + create**.
 1. On the **Review + create** tab of the **Create virtual network** blade, select **Create**.
-1. In the Azure portal, use the **Search resources, services, and docs** text box in the toolbar to search for and select **Virtual networks** and, on the **Virtual networks** blade, select **+ Add**.
+1. In the Azure portal, use the **Search resources, services, and docs** text box in the toolbar to search for and select **Virtual networks** and, on the **Virtual networks** blade, select **+ Create**.
 1. On the **Basics** tab of the **Create virtual network** blade, specify the following settings (leave others with their default values) and select **Next: IP Addresses**:
 
    *Table 8: Virtual network **ws2019-08-test-vnet** settings*
@@ -207,7 +208,7 @@ lab:
    |---|---|
    |Subscription|the name of the Azure subscription you are using in this lab|
    |Resource group|ws2019-08-rg3|
-   |Name|ws2019-08-test-vnet|
+   |Name|`ws2019-08-test-vnet`|
    |Region|the name of the Azure region into which you deployed the Recovery Services vault earlier in this lab|
 
 1. On the **IP addresses** tab of the **Create virtual network** blade, select the recycle bin icon, in the **IPv4 address space** text box, enter **10.0.0.0/22** and select **+ Add subnet**.
@@ -224,7 +225,7 @@ lab:
 
 1. Back on the **IP addresses** tab of the **Create virtual network** blade, select **Review + create**.
 1. On the **Review + create** tab of the **Create virtual network** blade, select **Create**.
-1. In the Azure portal, use the **Search resources, services, and docs** text box in the toolbar to search for and select **Storage accounts** and, on the **Storage accounts** blade, select **+ Add**.
+1. In the Azure portal, use the **Search resources, services, and docs** text box in the toolbar to search for and select **Storage accounts** and, on the **Storage accounts** blade, select **+ Create**.
 1. On the **Basics** tab of the **Create storage account** blade, specify the following settings (leave others with their default values):
 
    *Table 10: Storage account settings*
@@ -236,8 +237,7 @@ lab:
    |Storage account name|any globally unique name between 3 and 24 in length consisting of letters and digits, starting with a letter|
    |Location|the name of the Azure region into which you deployed the Recovery Services vault earlier in this lab|
    |Performance|Standard|
-   |Account kind|Storage (general purpose v1)|
-   |Replication|Locally redundant storage (LRS)|
+   |Redundancy|Locally redundant storage (LRS)|
 
 1. On the **Basics** tab of the **Create storage account** blade, select **Review + create**.
 1. On the **Review + create** tab of the **Create storage account** blade, select **Create**.
@@ -249,7 +249,7 @@ lab:
 1. On the **ws2019-08a-rsvault \| Site Recovery** blade, in the **Hyper-V machines to Azure** section, select **1. Prepare infrastructure**. 
 1. On the **Deployment planning** tab of the **Prepare infrastructure** blade, in the **Deployment planning completed?** drop-down list, select **Yes, I have done it** and select **Next**.
 1. On the **Source settings** tab of the **Prepare infrastructure** blade, next to the **Are you Using System Center VMM to manage Hyper-V hosts** label, select the **No** option.
-1. On the **Source settings** tab of the **Prepare infrastructure** blade, select the **Add Hyper-V site** link, on the **Create Hyper-V Site** blade, in the **Name** text box, enter **ws2019-08 Hyper-V site** and select **OK**:
+1. On the **Source settings** tab of the **Prepare infrastructure** blade, select the **Add Hyper-V site** link, on the **Create Hyper-V Site** blade, in the **Name** text box, enter **ws2019-08Hyper-Vsite** and select **OK**:
 1. On the **Source settings** tab of the **Prepare infrastructure** blade, select the **Add Hyper-V server** link. 
 1. On the **Add Server** blade, select the **Download** link in step 3 of the procedure for adding on-premises Hyper-V hosts in order to download the Microsoft Azure Site Recovery Provider.
 1. When prompted, in the browser window, select **Run** to launch **AzureSiteRecoveryProvider.exe**. This will start the **Azure Site Recovery Provider Setup (Hyper-V server)** wizard.
@@ -274,7 +274,7 @@ lab:
 
    |Setting|Value|
    |---|---|
-   |Name|ws2019-08 replication policy|
+   |Name|ws2019-08replicationpolicy|
    |Copy frequency|30 seconds|
 
 1. Back on the **Replication policy** tab of the **Prepare infrastructure** blade, wait until the site has been associated with the policy and select **Next**.
@@ -283,7 +283,7 @@ lab:
 #### Task 3: Enable replication of a Hyper-V virtual machine
 
 1. Within the Remote Desktop session to **ws2019-08-hvm0**, in the Azure portal, on the **ws2019-08a-rsvault \| Site Recovery** blade, in the **Hyper-V machines to Azure** section, select **2. Enable replication**. 
-1. On the **Source environment** tab of the **Enable replication** blade, in the **Source location** drop-down list, select **ws2019-08 Hyper-V site** and select **Next**.
+1. On the **Source environment** tab of the **Enable replication** blade, in the **Source location** drop-down list, select **ws2019-08Hyper-Vsite** and select **Next**.
 1. On the **Target environment** tab of the **Enable replication** blade, specify the following settings (leave others with their default values) and select **Next**:
 
    *Table 12: Target environment settings*
@@ -345,7 +345,7 @@ lab:
 
 #### Task 1: Create an Azure Site Recovery vault
 
-> **Note:** While, in general, the same vault can be used to implement Azure Site Recovery and Azure Backup functionality, the one hosting Azure Backup should be located close to the location of the backed up items. For this reason, you will create another Azure Site Recovery vault in the same Azure region as the Azure VM you deployed in the second exercise of this lab. 
+>  **Note:** While, in general, the same vault can be used to implement Azure Site Recovery and Azure Backup functionality, the one hosting Azure Backup should be located close to the location of the backed up items. For this reason, you will create another Azure Site Recovery vault in the same Azure region as the Azure VM you deployed in the second exercise of this lab. 
 
 1. Within the Remote Desktop session to **ws2019-08-hvm0**, switch to the Virtual Machine Connection window to **ws2019-08-vm1**.
 1. In the Virtual Machine Connection window to **ws2019-08-vm1**, in **Server Manager**, in the console tree, select **Local Server**.
@@ -353,8 +353,9 @@ lab:
 1. In the **Internet Explorer Enhanced Security Configuration** window, under **Administrators**, select the **Off** option, and then select **OK**.
 1. In the taskbar, select **Internet Explorer**.
 1. In the **Set up Internet Explorer 11** window, select **OK**.
-1. In Internet Explorer, navigate to the [Azure portal](https://portal.azure.com). When prompted, sign in using a user account with the Owner role in the Azure subscription you will be using in this lab.
-1. In the Azure portal, use the **Search resources, services, and docs** text box in the toolbar to search for and select **Recovery Services vaults** and, on the **Recovery Services vaults** blade, select **+ Add**.
+1. Within the Remote Desktop session to **ws2019-08-hvm0**, in the Virtual Machine Connection window to **ws2019-08-vm1**, in the Internet Explorer window, navigate to `https://www.microsoft.com/en-us/edge`. Scroll down and click on **Using Windows Server? Get Microsoft Edge here**. In the Download Microsoft Edge window, click **Accept and download**, then click **Run**. Once Microsoft Edge completes the installation, click **Complete setup**, click **Confirm**. Click **Continue without signing in**.
+1. Navigate to `https://portal.azure.com`. When prompted, sign in using a user account with the Owner role in the Azure subscription you will be using in this lab.
+1. In the Azure portal, use the **Search resources, services, and docs** text box in the toolbar to search for and select **Recovery Services vaults** and, on the **Recovery Services vaults** blade, select **+ Create**.
 1. On the **Basics** tab of the **Create Recovery Services vault** blade, specify the following settings (leave others with their default values) and select **Review + create**:
 
    *Table 14: Recovery Services vault (for Azure Backup) settings*
@@ -372,7 +373,7 @@ lab:
 
 #### Task 2: Configure the Azure Site Recovery vault
 
-1. Within the Remote Desktop session to **ws2019-08-hvm0**, in the Virtual Machine Connection window to **ws2019-08-vm1**, in the Internet Explorer window displaying the Azure portal, use the **Search resources, services, and docs** text box in the toolbar to search for and select **Recovery Services vaults** and, on the **Recovery Services vaults** blade, select **ws2019-08b-rsvault**.
+1. Within the Remote Desktop session to **ws2019-08-hvm0**, in the Virtual Machine Connection window to **ws2019-08-vm1**, in the Microsoft Edge window displaying the Azure portal, use the **Search resources, services, and docs** text box in the toolbar to search for and select **Recovery Services vaults** and, on the **Recovery Services vaults** blade, select **ws2019-08b-rsvault**.
 1. On the **ws2019-08b-rsvault** blade, in the vertical menu, in the **Settings** section, select **Properties**. 
 1. On the **ws2019-08b-rsvault | Properties** blade, select the **Update** link under the **Backup Configuration** label.
 1. On the **Backup Configuration** blade, set **Storage replication type** to **Locally-redundant**, select **Save** and close the **Backup Configuration** blade.
@@ -384,7 +385,7 @@ lab:
 
 ### Task 3: Install the Azure Recovery Services agent
 
-1. Within the Remote Desktop session to **ws2019-08-hvm0**, in the Virtual Machine Connection window to **ws2019-08-vm1**, in the Internet Explorer window displaying the Azure portal, on the **ws2019-08b-rsvault** Recovery Services vault blade, in the vertical menu, in the **Getting started** section, select **Backup**.
+1. Within the Remote Desktop session to **ws2019-08-hvm0**, in the Virtual Machine Connection window to **ws2019-08-vm1**, in the Microsoft Edge window displaying the Azure portal, on the **ws2019-08b-rsvault** Recovery Services vault blade, in the vertical menu, in the **Getting started** section, select **Backup**.
 1. On the **ws2019-08b-rsvault \|Backup** blade, specify the following settings:
 
    *Table 15: Backup settings*
@@ -404,7 +405,7 @@ lab:
 1. On the **Microsoft Update Opt-in** page of the **Microsoft Azure Recovery Services Agent Upgrade Wizard**, select **I do not want to use Windows Update**, and select **Next**.
 1. On the **Installation** page of the **Microsoft Azure Recovery Services Agent Upgrade Wizard**, select **Install**.
 1. After the installation completes, on the **Installation** page of the **Microsoft Azure Recovery Services Agent Upgrade Wizard**, select **Proceed to Registration**. This will launch the **Register Server Wizard**.
-1. Switch to the Internet Explorer window displaying the Azure portal, on the **Prepare infrastructure** blade, select the checkbox **Already downloaded or using the latest Recovery Server Agent**, and select **Download**.
+1. Switch to the Microsoft Edge window displaying the Azure portal, on the **Prepare infrastructure** blade, select the checkbox **Already downloaded or using the latest Recovery Server Agent**, and select **Download**.
 1. When prompted, whether to open or save the vault credentials file, select **Save**. This will save the vault credentials file to the local Downloads folder.
 1. Switch back to the **Register Server Wizard** window and, on the **Vault Identification** page, select **Browse**.
 1. In the **Select Vault Credentials** dialog box, browse to the **Downloads** folder, in the **Select Vault Credentials** dialog box, navigate to the **Downloads** folder, select the vault credentials file you downloaded, and select **Open**.
@@ -436,7 +437,7 @@ lab:
 1. On the **Retain Backup Till** page, accept the default setting and select **Next**.
 1. On the **Confirmation** page, select **Back Up**.
 1. When the backup is complete, select **Close**.
-1. Switch to the Internet Explorer window displaying the Azure portal, navigate back to the **ws2019-08b-rsvault** Recovery Services vault blade and select **Backup items**. 
+1. Switch to the Microsoft Edge window displaying the Azure portal, navigate back to the **ws2019-08b-rsvault** Recovery Services vault blade and select **Backup items**. 
 1. On the **ws2019-08b-rsvault \| Backup items** blade, select the **Azure Backup Agent** entry.
 1. On the **Backup Items (Azure Backup Agent)** blade, verify that there is an entry referencing the **C:\\** drive of **ws2019-08-vm1.**.
 
@@ -470,7 +471,7 @@ lab:
 
 ### Task 1: Remove the protected items
 
-1. Within the Remote Desktop session to **ws2019-08-hvm0**, in the Virtual Machine Connection window to **ws2019-08-vm1**, switch to the Internet Explorer window displaying the **Backup Items (Azure Backup Agent)** blade of the Azure portal and select the entry referencing the **C:\\** drive of **ws2019-08-vm1.**.
+1. Within the Remote Desktop session to **ws2019-08-hvm0**, in the Virtual Machine Connection window to **ws2019-08-vm1**, switch to the Microsoft Edge window displaying the **Backup Items (Azure Backup Agent)** blade of the Azure portal and select the entry referencing the **C:\\** drive of **ws2019-08-vm1.**.
 1. On the **C:\\ on ws2019-08-vm1.** blade, select the **ws2019-08-vm1.** link.
 1. On the **ws2019-08-vm1.** blade, select **Delete**. 
 1. On the **Delete** blade, specify the following information, select the checkbox **There is backup data of 1 backup items associated with this server. I understand that clicking "Confirm" will permanently delete all cloud backup data. This action cannot be undone. An alert may be sent to the administrators of this subscription notifying them of this deletion**, and select **Delete**:
@@ -481,9 +482,9 @@ lab:
    |---|---|
    |TYPE THE SERVER NAME|ws2019-08-vm1.|
    |Reason|Decommissioned|
-   |Comments|Decommissioned|
+   |Comments|`Decommissioned`|
 
-1. Close the Virtual Machine Connection window to **ws2019-08-vm1**, in the Remote Desktop session to **ws2019-08-hvm0**, in the Internet Explorer displaying the Azure portal, navigate to the **ws2019-08a-rsvault | Replicated items** blade, and select the **ws2019-08-vm1** entry.
+1. Close the Virtual Machine Connection window to **ws2019-08-vm1**, in the Remote Desktop session to **ws2019-08-hvm0**, in the Microsoft Edge window displaying the Azure portal, navigate to the **ws2019-08a-rsvault | Replicated items** blade, and select the **ws2019-08-vm1** entry.
 1. On the **ws2019-08-vm1** replicated items blade, select the ellipsis in the toolbar and, in the drop-down menu, select **Disable replication**. 
 1. On the **Disable replication** blade, ensure that the **Disable replication and remove (Recommended)** entry appears in the **Remove replicated items** drop-down list, select **I don't want to provide feedback** checkbox, and select **OK**.
 
@@ -501,4 +502,4 @@ lab:
    Get-AzResourceGroup -Name 'ws2019-08-*' | Remove-AzResourceGroup -Force -AsJob
    ```
 
-   > **Note:** The command executes asynchronously (as determined by the *-AsJob* parameter), so while you will be able to run another PowerShell command immediately after within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
+   >  **Note:** The command executes asynchronously (as determined by the *-AsJob* parameter), so while you will be able to run another PowerShell command immediately after within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
