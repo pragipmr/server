@@ -320,7 +320,7 @@ lab:
 
 1. In the **Azure AD Password Protection Proxy Bundle Setup** window, select the **I agree to the license terms and conditions** check box, and then select **Install**.
 
-1. In the **Completed the Azure AD Installation Successfully Completed** window, select **Finish**.
+1. In the **Completed the Azure AD Password Protection Proxy Setup Wizard** window, select **Finish**.
 
 1. Open the **AzureADPasswordProtectionDCAgentSetup.msi** file to install the DC agent.
 
