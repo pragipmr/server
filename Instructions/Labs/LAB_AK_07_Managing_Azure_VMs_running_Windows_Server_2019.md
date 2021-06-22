@@ -14,7 +14,7 @@ lab:
 1. Sign in to **SEA-CL1** as **Contoso\\Administrator** with **Pa55w.rd** as the password.
 1. On **SEA-CL1**, start Microsoft Edge, and then navigate to the [Azure portal](https://portal.azure.com). When prompted, sign in using a user account with the Owner role in the Azure subscription you will be using in this lab.
 1. In the Azure portal, in the **Search resources, services, and docs** text box in the toolbar, search for and select **Resource groups**.
-1. On the **Resource groups** blade, select **+ Add**. 
+1. On the **Resource groups** blade, select **+ Create**. 
 1. On the **Create a resource group** blade, specify the following settings: 
 
    *Table 1: Resource group settings*
@@ -159,6 +159,7 @@ lab:
 
    ```pwsh
    install-module pswsman
+   A
    Disable-WSManCertVerification -All
    ```
 1. In the Cloud Shell window, at the PowerShell prompt, enter the following command and select the **Enter** key to start the **Mod07Target** Azure VM:
@@ -240,10 +241,10 @@ lab:
 
 ### Task 1: Create a storage account
 
-> **Note**: Storage account names must be globally unique and can contain between 3 and 24 characters, including lowercase letters and numbers, starting with a letter.
+>  **Note**: Storage account names must be globally unique and can contain between 3 and 24 characters, including lowercase letters and numbers, starting with a letter.
 
 1. On **SEA-CL1**, in the Microsoft Edge browser, in the Azure portal, in the **Search resources, services, and docs** text box in the toolbar, search for and select **Storage accounts**.
-1. On the **Storage accounts** blade, select **+ Add**.
+1. On the **Storage accounts** blade, select **+ Create**.
 1. On the **Basics** tab of the **Create storage account** blade, specify the following settings (leave others with their default values):
 
    *Table 4: Storage account settings*
@@ -255,8 +256,7 @@ lab:
    |Storage account name|any globally unique name between 3 and 24 in length consisting of letters and digits|
    |Location|the name of the Azure region where you created the resource group in the previous task|
    |Performance|Standard|
-   |Account kind|Storage (general purpose v1)|
-   |Replication|Locally redundant storage (LRS)|
+   |Redundancy|Locally redundant storage (LRS)|
 
 1. On the **Basics** tab of the **Create storage account** blade, select **Review + Create**, wait for the validation process to complete, and select **Create**.
 
@@ -279,8 +279,8 @@ lab:
 
    > **Note**: The **Mod07Target \| Serial console** blade should display the **SAC> ** prompt
 
-1. On **Mod07Target \| Serial console** blade, at the **SAC> ** prompt, enter **cmd** and select the **Enter** key to create a channel that contains a CMD instance.
-1. On **Mod07Target \| Serial console** blade, at the **SAC> ** prompt, enter **ch -si 1** and select the **Enter** key to switch to the channel that's running the CMD instance.
+1. On **Mod07Target \| Serial console** blade, at the **SAC> ** prompt, enter `cmd` and select the **Enter** key to create a channel that contains a CMD instance.
+1. On **Mod07Target \| Serial console** blade, at the **SAC> ** prompt, enter `ch -si 1` and select the **Enter** key to switch to the channel that's running the CMD instance.
 1. On **Mod07Target \| Serial console** blade, select the **Enter** key, and then enter the following sign-in credentials of the local Administrator account:
 
    *Table 5: Mod07Target VM local Administrator credentials*
@@ -390,4 +390,4 @@ lab:
 1. In the Azure portal, in the **Search resources, services, and docs** text box in the toolbar, search for and select **Resource groups**.
 1. On the **Resource groups** blade, select **ws2019-07-rg1**.
 1. On the **ws2019-07-rg1** blade, in the toolbar, select **Delete resource group**.
-1. When prompted for confirmation, on the **Are you sure you want to delete "ws2019-07-rg1"?** blade, in the **TYPE THE RESOURCE GROUP NAME:** text box, enter **ws2019-07-rg1**, and then select **Delete**.
+1. When prompted for confirmation, on the **Are you sure you want to delete "ws2019-07-rg1"?** blade, in the **TYPE THE RESOURCE GROUP NAME:** text box, enter `ws2019-07-rg1`, and then select **Delete**.

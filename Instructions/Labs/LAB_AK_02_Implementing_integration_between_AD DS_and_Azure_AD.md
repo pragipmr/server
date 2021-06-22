@@ -23,7 +23,7 @@ lab:
 
 1. On the **Custom domain name** pane, in the **Custom domain name** text box, enter ```contoso.com```, and then select **Add domain**.
 
-1. On the ```Contoso.com``` custom domain name page, review the Domain Name System (DNS) record types that you would use to verify the domain.
+1. On the **contoso.com** custom domain name page, review the Domain Name System (DNS) record types that you would use to verify the domain.
 
 1. Close the pane without verifying the domain name.
 
@@ -196,13 +196,13 @@ lab:
 
 1. On the **Azure Active Directory** page, select **Users**.
 
-1. On the **All Users** page, search for the user **Ben**.
+1. On the **All Users** page, search for the user `Ben`.
 
 1. Open the properties page of the user **Ben Miller**, and then verify the **Job title** attribute that synced from Active Directory.
 
 1. In Microsoft Edge, select the **Back** button.
 
-1. On the **All Users** page, search for the user **Jordan**.
+1. On the **All Users** page, search for the user `Jordan`.
 
 1. Open the properties page of the user **Jordan Mitchell**, and then verify the attributes that synced from Active Directory.
 
@@ -308,7 +308,7 @@ lab:
 
 1. On **SEA-SVR2**, start Microsoft Edge, and then browse to the Microsoft website, and search for “Azure AD Password Protection for Windows Server Active Directory” to find the **Azure AD Password Protection for Windows Server Active Directory** page, and select **Download**.
 
-1. On **the Azure AD Password Protection for Windows Server Active Directory** page, select the AzureADPasswordProtectionProxySetup.exe and the AzureADPasswordProtectionDCAgentSetup.msi files, and then select **Next**.
+1. On **the Azure AD Password Protection for Windows Server Active Directory** page, select the AzureADPasswordProtectionProxySetup.msi and the AzureADPasswordProtectionDCAgentSetup.msi files, and then select **Next**.
 
 1. Select **Download**.
 
@@ -316,17 +316,17 @@ lab:
 
      >**Note:** We recommend installing the proxy service on a server that isn't a domain controller.
 
-1. On the status bar, locate the **AzureADPasswordProtectionProxySetup.exe** file, and then select **Open file**.
+1. On the status bar, locate the **AzureADPasswordProtectionProxySetup.msi** file, and then select **Open file**.
 
 1. In the **Azure AD Password Protection Proxy Bundle Setup** window, select the **I agree to the license terms and conditions** check box, and then select **Install**.
 
-1. In the **Installation Successfully Completed** window, select **Close**.
+1. In the **Completed the Azure AD Password Protection Proxy Setup Wizard** window, select **Finish**.
 
 1. Open the **AzureADPasswordProtectionDCAgentSetup.msi** file to install the DC agent.
 
 1. In the **Azure AD Password Protection DC Agent Setup** window, select the **I agree to the license terms and conditions** check box, and then select **Install**.
 
-1. In the **Completed the Azure AD Password Protection DC Agent Setup Wizard** window, select **Finish**.
+1. In the **Completed the Azure AD Password Protection DC Password Protection Proxy Setup Wizard** window, select **Finish**.
 
 1. In the **Azure AD Password Protection DC Agent Setup** dialog box, select **No**.
 
@@ -369,8 +369,8 @@ lab:
 1. On the **Password protection** page, change the slider for **Enforce custom list** to **Yes**.
 
 1. In the **Custom banned password list** text box, enter the following words (one per line):
-    - **Contoso**
-    - **London**
+    - `Contoso`
+    - `London`
 
      >**Note:** The list of banned passwords should be words that are relevant to your organization.
 

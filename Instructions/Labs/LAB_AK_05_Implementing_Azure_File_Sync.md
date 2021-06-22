@@ -18,7 +18,7 @@ lab:
 
 ### Task 2: Test DFS deployment
 
-1. On **SEA-CL1**, select **Start**, enter **DFS**, and then select **DFS Management**.
+1. On **SEA-CL1**, select **Start**, enter `DFS`, and then select **DFS Management**.
 2. In **DFS Management**, in the **navigation** pane, right-click or access the context menu for **Namespaces**, and then select **Add Namespaces to Display**.
 3. In the **Add Namespaces to Display** dialog box, ensure that ```\\Contoso.com\Root``` is selected in **Namespaces** section, and then select **OK**.
 4. In the **navigation** pane, right-click or access the context menu for **Replication**, and then select **Add Replication Groups to Display**.
@@ -43,7 +43,7 @@ lab:
 
 1. On **SEA-CL1**, select **Microsoft Edge** on the taskbar.
 2. In Microsoft Edge, open the Azure portal, and then authenticate with your Azure credentials.
-3. In the Azure portal, select **Storage accounts**, and then select **Add**.
+3. In the Azure portal, select **Storage accounts**, and then select **+ Create**.
 4. Create a storage account by using following settings:
 
     - Resource group: Select **Create new**, enter **RG1** as resource group name, and then select **OK**.
@@ -53,7 +53,7 @@ lab:
     >**Note:** Use the same region for deploying all resources in this lab.
 
 5. After the storage account is created, select **Go to resource**.
-6. On the **storage account** blade, select **File shares**, and then select **File share**.
+6. On the **storage account** blade, select **File shares**, and then select **+ File share**.
 7. On the **New file share** tab, enter **share1** in the **Name** text box, and then select **Create**.
 
 ### Task 2: Use an Azure file share
@@ -78,10 +78,10 @@ lab:
 
 ### Task 3: Deploy Storage Sync Service and a File Sync group
 
-1. On **SEA-CL1**, in the Azure portal, select **Create a resource** on the **navigation** blade, enter **Azure File Sync** in the text box, select **Azure File Sync**, and then select **Create**.
-2. In the **Deploy File Sync** pane, for **Resource Group**, select **RG1**. Enter **FileSync1** as the Storage Sync Service name, ensure that the same region is selected as was used for the storage account, and then select **Review and create** and **Create**.
+1. On **SEA-CL1**, in the Azure portal, select **Create a resource** on the **navigation** blade, enter `Azure File Sync` in the text box, select **Azure File Sync**, and then select **Create**.
+2. In the **Deploy File Sync** pane, for **Resource Group**, select **RG1**. Enter `FileSync1` as the Storage Sync Service name, ensure that the same region is selected as was used for the storage account, and then select **Review and create** and **Create**.
 3. After Storage Sync Service deploys, select **Go to resource**.
-4. On the **Storage Sync Service** blade, select **Sync groups**, and then select **Sync group** to create a new File Sync group.
+4. On the **Storage Sync Service** blade, select **Sync groups**, and then select **+ Sync group** to create a new File Sync group.
 5. In the **Sync group** pane, enter **Sync1** in the **Sync group name** text box.
 6. Select **Select storage account**, and then select the storage account that you created. If you can't find the storage account, it was probably deployed to a different Azure region. You must deploy a new Azure storage account in such a case.
 7. In the **Azure File Share** drop-down list, select **share1**, and then select **Create**.
@@ -145,7 +145,7 @@ lab:
 1. On **SEA-CL1**, in the Azure portal, browse to the **Sync1** sync group in the **FileSync1** Storage Sync Service.
 2. In the Azure portal, select ```LON-SVR1.Contoso.com``` in the **Server endpoint** section.
 3. On the **Server Endpoint Properties** tab, select **Enabled** in the **Cloud Tiering** section.
-4. In the **Always preserve the specified percentage of free space on the volume** text box, enter **90**, select **Enabled** for the **date policy**. In the **Only cache files that were accessed or modified within the specified number of days** text box, enter **14**, and then select **Save**.
+4. In the **Always preserve the specified percentage of free space on the volume** text box, enter `90`, select **Enabled** for the **date policy**. In the **Only cache files that were accessed or modified within the specified number of days** text box, enter `14`, and then select **Save**.
 
     >**Note:** After some time, files on **LON-SVR1** would automatically tier. You can trigger tiering immediately by running on LON-Cl1:
 
@@ -198,6 +198,6 @@ lab:
 1. Select **Delete**, and then select **OK**.
 1. In the **navigation** pane, select **All resources**.
 1. In the **details** pane, select **FileSync1** and the Azure storage account that you created in the lab (the storage account has a name in the \<*YourLowercaseInitials*>*DDMMYY* format).
-1. In the **Delete Resources** pane, select **Delete**, enter **yes** in a text box, and then select **Delete**.
+1. In the **Delete Resources** pane, select **Delete**, enter `yes` in a text box, and then select **Delete**.
 1. In the **navigation** pane, select **Resource groups**.
-1. In the **details** pane select **RG1**, select **Delete resource group**, enter **RG1**, and then select **Delete**.
+1. In the **details** pane select **RG1**, select **Delete resource group**, enter `RG1`, and then select **Delete**.
