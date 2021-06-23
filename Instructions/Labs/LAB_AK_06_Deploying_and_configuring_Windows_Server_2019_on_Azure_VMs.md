@@ -104,7 +104,7 @@ In this task, you will use the Azure portal to create resource groups and create
 1. Extract the content of the **template.zip** file into the same folder.
 1. Open the **template.json** file in Notepad, and review its content. Keep the Notepad window open.
 1. From File Explorer, open the **C:\\Labfiles\\Mod06\parameters.json** file in Notepad and review its content.
-1. Close the Notepad window displaying the **parameters.json** file**.
+1. Close the Notepad window displaying the **parameters.json** file.
 
 ### Task 2: Add an Azure VM extension section to the existing template
 
@@ -192,7 +192,7 @@ Navigate to the **Security Center|Azure Defender** blade and under **Advanced Pr
 ### Task 1: Create and configure an NSG
 
 1. In the Azure portal, on the toolbar, in the **Search resources, services, and docs** text box, search for and select **Network security groups**.
-1. On the **Network security groups** blade, select **+ Add**.
+1. On the **Network security groups** blade, select **+ Create**.
 1. On the **Basics** tab of the **Create network security group** blade, specify the following settings (leave others with their default values):
 
    *Table 7: Network security group settings*
@@ -200,8 +200,8 @@ Navigate to the **Security Center|Azure Defender** blade and under **Advanced Pr
    |Setting|Value|
    |---|---|
    |Subscription|the name of the Azure subscription you are using in this lab|
-   |Name|ws2019-06-vm0-nsg1|
    |Resource group|ws2019-06-rg1|
+   |Name|ws2019-06-vm0-nsg1|
    |Region|the name of the Azure region into which you provisioned the Azure VM ws2019-06-vm0|
 
 1. On the **Create network security group** blade, on the **Basics** tab of, select **Review + create**, and then select **Create**.

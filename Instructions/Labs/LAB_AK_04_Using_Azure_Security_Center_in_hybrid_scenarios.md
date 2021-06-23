@@ -55,7 +55,7 @@ lab:
 ### Task 1: Make Security Center available and upgrade to the Standard pricing tier
 
 1. Switch to Microsoft Edge, and then verify that you're signed in to the Azure portal.
-1. In the search box, enter **Security Center**, and then select **Security Center** from the results.
+1. In the search box, enter `Security Center`, and then select **Security Center** from the results.
 1. On the **Security Center** menu, select **Getting started**.
 1. On the **Upgrade** tab of the **Getting started** pane, for **Enable standard tier on 1 subscriptions**, select your subscription.
 1. Select **Upgrade**.
@@ -93,7 +93,7 @@ lab:
 ### Task 1: Download and install the Log Analytics agent
 
 1. On **SEA-CL1**, switch to Microsoft Edge, and then verify that you're signed in to the Azure portal.
-1. In the search box, enter **Log Analytics**, and then select **Log Analytics workspaces** from the results.
+1. In the search box, enter `Log Analytics`, and then select **Log Analytics workspaces** from the results.
 1. Select the listed Log Analytics workspace. There should only be one, and the name will start with "DefaultWorkspace".
 1. Select **Agents management**.
 1. Copy and save the **WORKSPACE ID** and the **PRIMARY KEY**.
@@ -109,12 +109,12 @@ lab:
     .\MMASetup-amd64.exe /c /t:c:\labfiles\mod04
     ```
 
-1. Open a new tab in Microsoft Edge, open **Windows Admin Center**, and then sign in as **Administrator** with password **Pa55w.rd**.
+1. Open a new tab in Microsoft Edge, open **Windows Admin Center**, and then sign in as `Administrator` with password `Pa55w.rd`.
 1. Select **Add**.
 1. Under **Windows Server**, select **Add**.
 1. Under **Server name**, enter ```sea-svr1.contoso.com```, and then select **Add**.
-1. In **Windows Admin Center**, select **SEA-SVR1**, and then sign in as **Contoso\\Administrator** with password **Pa55w.rd**.
-1. Select SEA-SVR1, select **PowerShell**, and then enter the password **Pa55w.rd**.
+1. In **Windows Admin Center**, select **SEA-SVR1**, and then sign in as `Contoso\Administrator` with password `Pa55w.rd`.
+1. Select SEA-SVR1, select **PowerShell**, and then enter the password `Pa55w.rd`.
 1. Enter the following commands:
 
     ```powershell
@@ -141,7 +141,7 @@ lab:
 
 1. Sign in by using the credentials that you created for this course.
 
-1. In the search box, enter **Virtual Machines**, and then select **Virtual Machines** from the results.
+1. In the search box, enter `Virtual Machines`, and then select **Virtual Machines** from the results.
 
 1. Select the **ws2019-m04-vm0** VM.
 
@@ -151,7 +151,7 @@ lab:
 
 1. If prompted, select **Connect**.
 
-1. Enter the username **Student** with password **Pa55w.rd1234**.
+1. Enter the username `Student` with password `Pa55w.rd1234`.
 
 1. In the VM's Remote Desktop session, select **Start**, and then select **Windows PowerShell**.
 
@@ -164,7 +164,7 @@ lab:
 
 1. In Microsoft Edge, switch to the Azure portal tab.
 
-1. In the search box, enter **Security Center**, and then select **Security Center** from the results.
+1. In the search box, enter `Security Center`, and then select **Security Center** from the results.
 
 1. On the **Overview** page, review the **Threat protection** section. You should have one new alert. If not, wait a few minutes.
 
@@ -189,7 +189,7 @@ lab:
 
 1. Open Microsoft Edge, and then browse to the [Azure portal](https://portal.azure.com).
 1. Sign in by using the credentials that you created for this course.
-1. In the search box, enter **Security Center**, and then select **Security Center** from the results.
+1. In the search box, enter `Security Center`, and then select **Security Center** from the results.
 7. On the **Overview** page, review the **Azure defender** section. You should have one new alert for **SEA-SVR1**. If not, wait a few minutes.
 8. In the **General** section of the **Security Center** menu, select **Security alerts**. There should be a new alert for **SEA-SVR1**.
 9. In the **General** section of the **Security Center**, select **Inventory** and then select **SEA-SVR1**.
